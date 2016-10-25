@@ -35,8 +35,11 @@ Masks can be specified to allow/disallow base-pairing at specific query
 positions.  The mask string must be single-quoted to prevent shell expansion
 and must be of same length as the query seq.  It must be made up of only the
 following chars that denote constraints at each position:
+
     ! = only W/C base pairing allowed
+    
     ? = any canonical base pairing (W/C or G/U) allowed
+    
     . = no constraints (anything allowed)
     
 Duplexes that pass the match criteria are written to STDOUT.  Search criteria
@@ -48,31 +51,43 @@ passed--and no sequence id is known--the output file will be <guide sequence>.ou
 Results can also be outputted to stdout by passing the corresponding flag. 
 
 Options:
-  -h, --help            show this help message and exit
+  
+  -h, --help            show this help message and exit 
+  
   -l LENGTH, --minLen=LENGTH
                         minimum duplex length
+                        
   -m LENGTH, --maxMis=LENGTH
                         maximum number of mismatches in duplex
+                        
   -g LENGTH, --maxGU=LENGTH
                         maximum number of G/U base pairs duplex
+                        
   -a 'STRING', --mask='STRING'
                         use this custom mask (put it in SINGLE quotes);
                         default mask        is none, unless --cdMode is set,
                         in which case a C/D sRNA-specific mask is created to
                         constrain base pairing around the methylation site (as
                         inferred by the N+5 rule)
+                        
   -s, --cdMode          turn on C/D sRNA-specific default mask creation and
                         output options; if         this is set, query sequence
                         is assumed to be the guide sequence that begins with
                         the FIRST nuc of the D or D\ box (generally a "C")
+                        
   -t THRESHOLD, --threshold=THRESHOLD
                         Cutoff score used to filter duplexes. Default values
                         is 10.
+                        
   -w WC, --wc_gain=WC   Score gain for a single Watson-Crick pairing. Default
                         is 2.
+                        
   -u GU, --gu_gain=GU   Score gain for a GU pairing. Default is 1.
+  
   -o O, --open=O        Gap opening penalty. Default is 2.
+  
   -e E, --extend=E      Gap extension penalty. Default is 1.
+  
   -i, --to_stdout       Output results to stdout.
 
 
