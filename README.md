@@ -52,7 +52,7 @@ Results can also be outputted to stdout by passing the corresponding flag.
 
 Options:
 
-    -h, HELP,  --help             show this help message and exit 
+    -h,        --help             show this help message and exit 
     -l LENGTH, --minLen=LENGTH    minimum duplex length
     -m LENGTH, --maxMis=LENGTH    maximum number of mismatches in duplex
     -g LENGTH, --maxGU=LENGTH     maximum number of G/U base pairs duplex
