@@ -1,7 +1,9 @@
 # findAntisense
-Find antisense RNA interactions
+Find antisense RNA interactions!
 
 Authors: Lauren Lui, Andrew Uzilov, Andrea Corredor
+
+Note that this will only work with Python 2.7
 
 Instructions for obtaining a platform and architecture specific c_antisense.so and be able to use findAntisense.py
 
@@ -44,6 +46,35 @@ Output is by default written to file(s) <seqID>.output.txt when the guide
 sequences are read from a FASTA file. When a single guide sequence is 
 passed--and no sequence id is known--the output file will be <guide sequence>.output.txt
 Results can also be outputted to stdout by passing the corresponding flag. 
+
+Options:
+  -h, --help            show this help message and exit
+  -l LENGTH, --minLen=LENGTH
+                        minimum duplex length
+  -m LENGTH, --maxMis=LENGTH
+                        maximum number of mismatches in duplex
+  -g LENGTH, --maxGU=LENGTH
+                        maximum number of G/U base pairs duplex
+  -a 'STRING', --mask='STRING'
+                        use this custom mask (put it in SINGLE quotes);
+                        default mask        is none, unless --cdMode is set,
+                        in which case a C/D sRNA-specific mask is created to
+                        constrain base pairing around the methylation site (as
+                        inferred by the N+5 rule)
+  -s, --cdMode          turn on C/D sRNA-specific default mask creation and
+                        output options; if         this is set, query sequence
+                        is assumed to be the guide sequence that begins with
+                        the FIRST nuc of the D or D\ box (generally a "C")
+  -t THRESHOLD, --threshold=THRESHOLD
+                        Cutoff score used to filter duplexes. Default values
+                        is 10.
+  -w WC, --wc_gain=WC   Score gain for a single Watson-Crick pairing. Default
+                        is 2.
+  -u GU, --gu_gain=GU   Score gain for a GU pairing. Default is 1.
+  -o O, --open=O        Gap opening penalty. Default is 2.
+  -e E, --extend=E      Gap extension penalty. Default is 1.
+  -i, --to_stdout       Output results to stdout.
+
 
 KNOWN BUG: Bad things if required sites exist outside of a duplex.
 To fix (TODO):
