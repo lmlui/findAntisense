@@ -7,7 +7,7 @@ Note that this will only work with Python 2.7
 
 Instructions for obtaining a platform and architecture specific c_antisense.so and be able to use findAntisense.py
 
-1. Download the tar ball containing all source files
+1. Download the zip file containing all source files
 2. In the directory containing all source files type the command:
     python setup.py build_ext --inplace
 3. Run findAntisense.py as described in findAntisense.py -h 
