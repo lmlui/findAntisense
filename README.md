@@ -12,6 +12,10 @@ Instructions for obtaining a platform and architecture specific c_antisense.so a
     python setup.py build_ext --inplace
 3. Run findAntisense.py as described in findAntisense.py -h 
 
+Examples and use:
+
+See the wiki: https://github.com/lmlui/findAntisense/wiki
+
 Description:
 
 Given a single sequence as a query, search a sequence database for
