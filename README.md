@@ -6,6 +6,7 @@ Authors: Lauren Lui, Andrew Uzilov, Andrea Corredor
 **Note that this will only work with Python 2.7**
 
 **Installation**
+
 Instructions for obtaining a platform and architecture specific c_antisense.so and be able to use findAntisense.py
 
 1. Download the zip file containing all source files
