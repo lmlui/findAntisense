@@ -5,6 +5,7 @@ Authors: Lauren Lui, Andrew Uzilov, Andrea Corredor
 
 **Note that this will only work with Python 2.7**
 
+**Installation**
 Instructions for obtaining a platform and architecture specific c_antisense.so and be able to use findAntisense.py
 
 1. Download the zip file containing all source files
@@ -12,11 +13,11 @@ Instructions for obtaining a platform and architecture specific c_antisense.so a
     python setup.py build_ext --inplace
 3. Run findAntisense.py as described in findAntisense.py -h 
 
-Examples and use:
+**Examples and use:**
 
 See the wiki: https://github.com/lmlui/findAntisense/wiki
 
-Description:
+**Description:**
 
 Given a single sequence as a query, search a sequence database for
 sense/anti-sense interactions (duplexes) between query and target(s).
